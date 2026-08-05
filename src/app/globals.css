@@ -1,26 +1,93 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-playfair), ui-serif, Georgia, serif;
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive: var(--destructive);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #0F0F0F; /* Primary Black */
+  --foreground: #FFFFFF; /* White */
+  --card: #1A1A1A; /* Dark Gray */
+  --card-foreground: #FFFFFF;
+  --popover: #1A1A1A;
+  --popover-foreground: #FFFFFF;
+  --primary: #D4AF37; /* Luxury Gold */
+  --primary-hover: #C9A227; /* Gold Hover */
+  --primary-foreground: #0F0F0F;
+  --secondary: #0F5132; /* Emerald Green */
+  --secondary-foreground: #FFFFFF;
+  --muted: #1A1A1A; /* Dark Gray */
+  --muted-foreground: #B0B0B0; /* Light Gray */
+  --accent: #7A0019; /* Burgundy */
+  --accent-foreground: #FFFFFF;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #FFFFFF;
+  --border: #1A1A1A; /* Dark Gray */
+  --input: #1A1A1A;
+  --ring: #D4AF37;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #0F0F0F; /* Primary Black */
+  --foreground: #FFFFFF; /* White */
+  --card: #1A1A1A; /* Dark Gray */
+  --card-foreground: #FFFFFF;
+  --popover: #1A1A1A;
+  --popover-foreground: #FFFFFF;
+  --primary: #D4AF37; /* Luxury Gold */
+  --primary-hover: #C9A227; /* Gold Hover */
+  --primary-foreground: #0F0F0F;
+  --secondary: #0F5132; /* Emerald Green */
+  --secondary-foreground: #FFFFFF;
+  --muted: #1A1A1A; /* Dark Gray */
+  --muted-foreground: #B0B0B0; /* Light Gray */
+  --accent: #7A0019; /* Burgundy */
+  --accent-foreground: #FFFFFF;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #FFFFFF;
+  --border: #1A1A1A; /* Dark Gray */
+  --input: #1A1A1A;
+  --ring: #D4AF37;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
 }
