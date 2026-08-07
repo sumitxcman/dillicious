@@ -73,6 +73,20 @@ const signatureDishes = [
     description: "Royalty on a plate: tender paneer cubes cooked in a luscious, slightly sweet tomato and cashew curry.",
     price: "₹410",
     image: "/sig_shahi_paneer_1785912736955.jpg"
+  },
+  {
+    id: 11,
+    name: "Watermelon Berry Splash",
+    description: "Our signature vibrant mocktail, blending fresh watermelon, crushed berries, and mint on ice.",
+    price: "₹180",
+    image: "/about-us-1.jpg"
+  },
+  {
+    id: 12,
+    name: "Tropical Mint Cooler",
+    description: "A refreshing burst of green apple, mint, and crushed ice, finished with a classic umbrella.",
+    price: "₹180",
+    image: "/paneer-tikka.jpg"
   }
 ];
 
