@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FiMapPin, FiPhone, FiClock, FiInstagram, FiFacebook, FiTwitter } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -63,8 +64,18 @@ export default function Footer() {
               </span>
             </li>
             <li className="flex gap-4 items-center">
-              <FiPhone className="text-primary shrink-0" size={18} />
-              <span className="text-muted-foreground text-sm">087000 87329</span>
+              <FaWhatsapp className="text-[#25D366] shrink-0" size={18} />
+              <a 
+                href="https://wa.me/918700087329" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors flex items-center gap-2"
+              >
+                087000 87329
+                <span className="text-[0.6rem] uppercase tracking-wider text-[#25D366] font-medium border border-[#25D366]/30 px-2 py-0.5 rounded-full bg-[#25D366]/10">
+                  Chat Now
+                </span>
+              </a>
             </li>
           </ul>
         </div>
